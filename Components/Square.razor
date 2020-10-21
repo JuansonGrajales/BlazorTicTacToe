@@ -1,1 +1,8 @@
-<div class="square"></div>
+<div class="square" @onclick="ChangeValue">@value</div>
+@code{
+    private char value = ' ';
+    private void ChangeValue()
+    {
+        value = value == 'O' ? 'X' : 'O';
+    }
+}
