@@ -34,12 +34,12 @@ namespace BlazorTicTacToe.Helpers
             }
             return isBoardFull ? GameStatus.Draw : GameStatus.NotYetFinished;
         }
-        public enum GameStatus
-        {
-            X_wins,
-            O_wins,
-            Draw,
-            NotYetFinished
-        }
+    }
+    public enum GameStatus
+    {
+        X_wins,
+        O_wins,
+        Draw,
+        NotYetFinished
     }
 }
