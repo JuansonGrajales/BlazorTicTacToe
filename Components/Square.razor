@@ -1,8 +1,7 @@
-<div class="square" @onclick="ChangeValue">@value</div>
+<div class="square" @onclick="ClickHandler">@value</div>
 @code{
-    private char value = ' ';
-    private void ChangeValue()
-    {
-        value = value == 'O' ? 'X' : 'O';
-    }
+    [Parameter]
+    public char value { get; set; }
+    [Parameter]
+    public EventCallback ClickHandler { get; set; }
 }
