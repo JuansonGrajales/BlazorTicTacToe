@@ -45,6 +45,11 @@ app {
   top: -2px;
 }
 
+button {
+  border-radius: 10%;
+  margin: 20px;
+}
+
 .nav-item {
   font-size: 0.9rem;
   padding-bottom: 0.5rem;
@@ -133,11 +138,6 @@ app {
     /* Never collapse the sidebar for wide screens */
     display: block;
   }
-}
-
-button {
-  border-radius: 10%;
-  margin: 10px;
 }
 
 /**********************TicTacToe Board*******************/
