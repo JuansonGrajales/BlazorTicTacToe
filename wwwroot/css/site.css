@@ -135,6 +135,11 @@ app {
   }
 }
 
+button {
+  border-radius: 10%;
+  margin: 10px;
+}
+
 /**********************TicTacToe Board*******************/
 .board {
   display: grid;
