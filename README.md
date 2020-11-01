@@ -27,7 +27,7 @@ Blazor apps are built with [components](https://docs.microsoft.com/en-us/aspnet/
 
 ### Square.razor
 
-```
+```C#
 <div class="square" @onclick="ClickHandler">@value</div>
 @code{
     //---properties
