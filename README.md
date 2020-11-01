@@ -22,7 +22,7 @@ Once you've ran the command above, open the folder and run the following command
 ```
 dotnet run
 ```
-Open the browser and navigate to http://localhost:5000 or https://localhost:5001. You should be able to see the application something like the following :
+Open the browser and navigate to your local host. You should be able to see the application something like the following :
 
 <img src="Assets/BlazorTicTacToe.gif" height=300>
 
