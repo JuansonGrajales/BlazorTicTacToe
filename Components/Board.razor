@@ -27,6 +27,7 @@
         <Square @key=squareNumber value=values[squareNumber] ClickHandler="@(() => HandleClick(squareNumber))" />
     }
 </div>
+<button class="btn btn-primary" @onclick="PlayAgainHandler">New Game</button>
 
 @code{
     private bool xIsNext;
