@@ -1,6 +1,6 @@
 # BlazorTicTacToe
 
-![BlazorWASM and C# logo](https://github.com/JuansonGrajales/BlazorTicTacToe/Assets/BlazorWebAssembleC#.png)
+<img src="Assets/BlazorWebAssembleC#.png">
 
 ## What is Blazor WebAssembly?
 
