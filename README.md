@@ -1,6 +1,6 @@
 # BlazorTicTacToe
 
-<img src="Assets/BlazorWebAssemblyC.png" height=100>
+<img src="Assets/BlazorWebAssemblyC.png" height=200>
 
 ## What is Blazor WebAssembly?
 
