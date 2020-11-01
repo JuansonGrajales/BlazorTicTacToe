@@ -24,7 +24,7 @@ dotnet run
 ```
 Open the browser and navigate to http://localhost:5000 or https://localhost:5001. You should be able to see the application something like the following :
 
-<img src="Assets/blazorIndex.jpg" height=300>
+<img src="Assets/BlazorTicTacToe.gif" height=300>
 
 ## Components
 Blazor apps are built with [components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-3.1#:~:text=Blazor%20apps%20are%20built%20using%20components.%20A%20component,to%20UI%20events.%20Components%20are%20flexible%20and%20lightweight.). A component is a self-contained chunk of user interface, such as a page, dialog, or form. They include HTML markup and the processing logic required to inject data or respond to UI events. For this project, two components were build:
