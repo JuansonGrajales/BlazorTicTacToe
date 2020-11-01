@@ -10,9 +10,9 @@ A few things are neede to get started on Blazor Web Assembly Project
 * Install [Visual Studio Code](https://code.visualstudio.com/)
 * Install the latest version of the [C# extension in VS Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
-After installing the above tools, we can create Blazor WebAssembly. Open the command/terminal to run the following command:
+After installing the above tools, Clone Git repository from GitHub::
 ```
-dotnet new blazorwasm -o <Name of the project>
+git clone 
 ```
 Once you've ran the command above, open the folder and run the following command from VS Code terminal:
 ```
