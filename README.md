@@ -46,7 +46,7 @@ Above are two things to focus on, **Normal routing** and **Not found**.
 * Normal routing is taken care of by the <Found> component. It uses the MainLayout component to set up the DefaultLayout
 * Not found is handled by the <NotFound> component and handles any non-defiend routes and outputs an error text
     
-The main layout renders content using the @Body. All site content will be rendered under Main. Our default page is Index.razor. At the top of the file @page tells us what route it handles, in this case, / is the default route. 
+The MainLayout renders content using the *@Body*. All site content will be rendered under MainLayout. If you go to the Index.razor file, you'll notice the [*@page "/"*](https://docs.microsoft.com/en-us/dotnet/architecture/blazor-for-web-forms-developers/pages-routing-layouts) at the top of the file. This tells us what route it handles and in this case the *"/"* is our default route. 
     
 For this project, two components were build:
 
