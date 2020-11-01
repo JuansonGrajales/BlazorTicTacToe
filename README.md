@@ -51,6 +51,12 @@ The MainLayout renders content using the *@Body*. All site content will be rende
 For this project, you'll find two custom components that make up the TicTacToe game: [Board.razor](https://github.com/JuansonGrajales/BlazorTicTacToe/Components/Board.razor) and [Square.razor](https://github.com/JuansonGrajales/BlazorTicTacToe/Components/Square.razor). The Square component is render with the Board component and the Board Component will be render by the Index.razor page. See below.
 
 ```C#
+@*Default landing page*@
+@page "/"
+@using BlazorTicTacToe.Components
 
+<h1>Tic Tac Toe using Blazor WASM</h1>
+
+<Board />
 ```
 
