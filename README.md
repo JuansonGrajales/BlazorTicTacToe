@@ -9,9 +9,16 @@
 A few things are neede to get started on Blazor Web Assembly Project
 * Install the [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * Install [Visual Studio Code](https://code.visualstudio.com/)
-* Install the latest version of the [C# extension in VSCode](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+* Install the latest version of the [C# extension in VS Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 After installing the above tools, we can create Blazor WebAssembly. Open the command/terminal to run the following command:
 ```
 dotnet new blazorwasm -o <Name of the project>
 ```
+Once you've ran the command above, open the folder and run the following command from VS Code terminal:
+```
+dotnet run
+```
+Open the browser and navigate to http://localhost:5000 or https://localhost:5001. You should be able to see the application something like the following :
+
+<img src="Assets/" height=300>
