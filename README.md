@@ -27,7 +27,26 @@ Open the browser and navigate to your local host. You should be able to see the 
 <img src="Assets/BlazorTicTacToe.gif" height=300>
 
 ## Components
-Blazor apps are built with [components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-3.1#:~:text=Blazor%20apps%20are%20built%20using%20components.%20A%20component,to%20UI%20events.%20Components%20are%20flexible%20and%20lightweight.). A component is a self-contained chunk of user interface, such as a page, dialog, or form. They include HTML markup and the processing logic required to inject data or respond to UI events. For this project, two components were build:
+Blazor apps are built with [components](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-3.1#:~:text=Blazor%20apps%20are%20built%20using%20components.%20A%20component,to%20UI%20events.%20Components%20are%20flexible%20and%20lightweight.). A component is a self-contained chunk of user interface, such as a page, dialog, or form. They include HTML markup and the processing logic required to inject data or respond to UI events. 
+
+The root component is called App and can be found in the file App.razor. 
+```C#
+<Router AppAssembly="@typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+```
+Above are two things to focus on, **Normal routing** and **Not found**. 
+* Normal routing is taken care of by the <Found> component. It uses the MainLayout component to set up the DefaultLayout
+* Not found is handled by the <NotFound> component and handles any non-defiend routes and outputs an error text
+    
+For this project, two components were build:
 
 ### Square.razor
 
