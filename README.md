@@ -48,93 +48,9 @@ Above are two things to focus on, **Normal routing** and **Not found**.
     
 The MainLayout renders content using the *@Body*. All site content will be rendered under MainLayout. If you go to the Index.razor file, you'll notice the [*@page "/"*](https://docs.microsoft.com/en-us/dotnet/architecture/blazor-for-web-forms-developers/pages-routing-layouts) at the top of the file. This tells us what route it handles and in this case the *"/"* is our default route. 
     
-For this project, two components were build:
-
-### Square.razor
+For this project, you'll find two custom components that make up the TicTacToe game: [Board.razor](https://github.com/JuansonGrajales/BlazorTicTacToe/Components/Board.razor) and [Square.razor](https://github.com/JuansonGrajales/BlazorTicTacToe/Components/Square.razor). The Square component is render with the Board component and the Board Component will be render by the Index.razor page. See below.
 
 ```C#
-<div class="square" @onclick="ClickHandler">@value</div>
-@code{
-    //---properties
-    [Parameter]
-    public char value { get; set; }
-    [Parameter]
-    public EventCallback ClickHandler { get; set; }
-}
-```
 
-### Board.razor
-
-```C#
-@{
-    var gameStatus = Helper.CalculateGameStatus(values);
-    string status;
-    if (gameStatus == GameStatus.X_wins)
-    {
-        status = "Winner: X";
-    }
-    else if (gameStatus == GameStatus.O_wins)
-    {
-        status = "Winner: O";
-    }
-    else if (gameStatus == GameStatus.Draw)
-    {
-        status = "Draw!";
-    }
-    else
-    {
-        char nextPlayer = xIsNext ? 'X' : 'O';
-        status = $"Next player: {nextPlayer}";
-    }
-}
-<h3>@status</h3>
-<div class="board">
-    @for (int i = 0; i < 9; i++)
-    {
-        int squareNumber = i;
-        <Square @key=squareNumber value=values[squareNumber] ClickHandler="@(() => HandleClick(squareNumber))" />
-    }
-</div>
-
-@code{
-    //---fields
-    private bool xIsNext;
-    private char[] values = new char[9];
-
-    //---methods
-    protected override void OnInitialized()
-    {
-        InitState();
-    }
-    private void PlayAgainHandler()
-    {
-        InitState();
-    }
-    private void InitState()
-    {
-        values = new char[9]{
-            ' ', ' ', ' ',
-            ' ', ' ', ' ',
-            ' ', ' ', ' '
-        };
-        xIsNext = true;
-    }
-
-    private void HandleClick(int i)
-    {
-        if (values[i] != ' ')
-        {
-            return;
-        }
-        bool isGameFinish = Helper.CalculateGameStatus(values) != GameStatus.NotYetFinished;
-        if (isGameFinish)
-        {
-            return;
-        }
-        bool xToPlay = xIsNext;
-        values[i] = xToPlay ? 'X' : 'O';
-        xIsNext = !xToPlay;
-    }
-}
 ```
 
