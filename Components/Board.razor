@@ -27,11 +27,13 @@
         <Square @key=squareNumber value=values[squareNumber] ClickHandler="@(() => HandleClick(squareNumber))" />
     }
 </div>
-<button class="btn btn-primary" @onclick="PlayAgainHandler">New Game</button>
 
 @code{
+    //---fields
     private bool xIsNext;
     private char[] values = new char[9];
+
+    //---methods
     protected override void OnInitialized()
     {
         values = new char[9]{

@@ -4,6 +4,9 @@ namespace BlazorTicTacToe.Helpers
     {
         public static GameStatus CalculateGameStatus(char[] squares)
         {
+            /**Status of the Game is called after every click
+             There are 8 possible winning combinations
+             Each 3-set represents the index of the square**/
             var winningCombos = new int[8, 3]{
                 {0,1,2},
                 {3,4,5},
@@ -23,6 +26,7 @@ namespace BlazorTicTacToe.Helpers
                     return squares[winningCombos[i, 0]] == 'X' ? GameStatus.X_wins : GameStatus.O_wins;
                 }
             }
+            //Checks if board game is full
             bool isBoardFull = true;
             for (int i = 0; i < squares.Length; i++)
             {
