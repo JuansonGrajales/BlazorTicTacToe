@@ -12,7 +12,11 @@ A few things are neede to get started on Blazor Web Assembly Project
 
 After installing the above tools, Clone Git repository from GitHub::
 ```
-git clone 
+git clone https://github.com/JuansonGrajales/BlazorTicTacToe.git
+```
+Switch into the cloned folder:
+```
+cd BlazorTicTacToe
 ```
 Once you've ran the command above, open the folder and run the following command from VS Code terminal:
 ```
