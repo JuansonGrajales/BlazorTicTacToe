@@ -21,4 +21,4 @@ dotnet run
 ```
 Open the browser and navigate to http://localhost:5000 or https://localhost:5001. You should be able to see the application something like the following :
 
-<img src="Assets/" height=300>
+<img src="Assets/blazorIndex.jpg" height=300>
