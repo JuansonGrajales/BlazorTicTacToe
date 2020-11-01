@@ -38,3 +38,78 @@ Blazor apps are built with [components](https://docs.microsoft.com/en-us/aspnet/
 }
 ```
 
+### Board.razor
+
+```C#
+@{
+    var gameStatus = Helper.CalculateGameStatus(values);
+    string status;
+    if (gameStatus == GameStatus.X_wins)
+    {
+        status = "Winner: X";
+    }
+    else if (gameStatus == GameStatus.O_wins)
+    {
+        status = "Winner: O";
+    }
+    else if (gameStatus == GameStatus.Draw)
+    {
+        status = "Draw!";
+    }
+    else
+    {
+        char nextPlayer = xIsNext ? 'X' : 'O';
+        status = $"Next player: {nextPlayer}";
+    }
+}
+<h3>@status</h3>
+<div class="board">
+    @for (int i = 0; i < 9; i++)
+    {
+        int squareNumber = i;
+        <Square @key=squareNumber value=values[squareNumber] ClickHandler="@(() => HandleClick(squareNumber))" />
+    }
+</div>
+
+@code{
+    //---fields
+    private bool xIsNext;
+    private char[] values = new char[9];
+
+    //---methods
+    protected override void OnInitialized()
+    {
+        InitState();
+    }
+    private void PlayAgainHandler()
+    {
+        InitState();
+    }
+    private void InitState()
+    {
+        values = new char[9]{
+            ' ', ' ', ' ',
+            ' ', ' ', ' ',
+            ' ', ' ', ' '
+        };
+        xIsNext = true;
+    }
+
+    private void HandleClick(int i)
+    {
+        if (values[i] != ' ')
+        {
+            return;
+        }
+        bool isGameFinish = Helper.CalculateGameStatus(values) != GameStatus.NotYetFinished;
+        if (isGameFinish)
+        {
+            return;
+        }
+        bool xToPlay = xIsNext;
+        values[i] = xToPlay ? 'X' : 'O';
+        xIsNext = !xToPlay;
+    }
+}
+```
+
