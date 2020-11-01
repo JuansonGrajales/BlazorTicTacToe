@@ -1,5 +1,5 @@
 # BlazorTicTacToe
-
+This is a introductory project for me to get familiar with BlazorWebAssembly
 <img src="Assets/BlazorWebAssemblyC.png" height=300>
 
 ## What is Blazor WebAssembly?
